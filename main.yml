@@ -22,4 +22,4 @@
   roles :
     - create_users
     - install_kub8
-    - join_cluster_worker
+    - join_cluster_workers
