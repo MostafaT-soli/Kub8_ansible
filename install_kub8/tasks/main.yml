@@ -64,5 +64,6 @@
      - name: install kubernetes
        shell: |
                sudo apt-get update
+               sudo apt-get install -y acl
                sudo apt-get install -y kubelet kubeadm kubectl
                sudo apt-mark hold kubelet kubeadm kubectl
