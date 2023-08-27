@@ -1,12 +1,23 @@
 ---
-- name: create users 
-  hosts: "masters, workers"
-  remote_user: tatek_soli # needs to be adjusted 
+- name: run master roles
+  hosts: localhost
+  become: yes
+  become_method: sudo
+  become_user: root
+  gather_facts: yes
+  roles :
+    - create_users
+    - install_kub8
+    - create_cluster_master
+
+- name: run worker roles
+  hosts: "workers"
+  remote_user: tatek_soli # needs to be adjusted depending on SSH user
   become: yes
   become_method: sudo
   become_user: root
   gather_facts: yes
   connection: ssh
   roles :
-    - users 
-    
+    - create_users
+    - install-k8s.yml
