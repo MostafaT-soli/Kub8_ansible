@@ -1,7 +1,4 @@
-- hosts: 'workers, masters'
-  become: yes
 
-  tasks:
     - name: create the kube user account
       user: name=kube append=yes state=present createhome=yes shell=/bin/bash
 

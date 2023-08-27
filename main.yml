@@ -1,0 +1,13 @@
+---
+- name: create users 
+  hosts: "masters, workers"
+  remote_user: tatek_soli # needs to be adjusted 
+  become: yes
+  become_method: sudo
+  become_user: root
+  gather_facts: yes
+  connection: ssh
+  include_role:
+    - name: install users 
+      tasks_from: users
+    
