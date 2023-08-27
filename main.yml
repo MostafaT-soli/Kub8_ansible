@@ -7,5 +7,6 @@
   become_user: root
   gather_facts: yes
   connection: ssh
-  import_tasks : users.yml
+  roles :
+    - users 
     
