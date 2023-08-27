@@ -20,4 +20,4 @@
   connection: ssh
   roles :
     - create_users
-    - install-k8s.yml
+    - install_kub8
