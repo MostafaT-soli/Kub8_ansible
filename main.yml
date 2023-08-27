@@ -6,9 +6,10 @@
   become_user: root
   gather_facts: yes
   roles :
-    - create_users
-    - install_kub8
-    - create_cluster_master
+    #- create_users
+    #- install_kub8
+    #- create_cluster_master
+    - create_ingress_master
 
 - name: run worker roles
   hosts: "workers"

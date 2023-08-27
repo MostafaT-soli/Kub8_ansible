@@ -1,0 +1,8 @@
+---
+    - name: Create Ingress
+      become: true
+      become_user: kube
+      become_method: sudo
+      shell: kubectl apply -f https://projectcontour.io/quickstart/contour.yaml
+      args:
+        chdir: $HOME
