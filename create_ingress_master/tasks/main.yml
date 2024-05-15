@@ -3,6 +3,6 @@
       become: true
       become_user: kube
       become_method: sudo
-      shell: kubectl apply -f https://projectcontour.io/quickstart/contour.yaml
+      shell: kubectl apply -f https://raw.githubusercontent.com/nginxinc/kubernetes-ingress/v3.5.1/deploy/crds.yaml
       args:
         chdir: $HOME
