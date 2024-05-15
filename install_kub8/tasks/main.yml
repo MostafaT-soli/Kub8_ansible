@@ -60,7 +60,7 @@
        blockinfile:
          path: "/etc/apt/sources.list.d/kubernetes.list"
          block: |
-               deb https://apt.kubernetes.io/ kubernetes-xenial main
+               deb http://packages.cloud.google.com/apt/ kubernetes-xenial main
 
      - name: install kubernetes
        shell: |
