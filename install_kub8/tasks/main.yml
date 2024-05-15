@@ -13,6 +13,7 @@
 
      - name: modprobe
        shell: |
+               sudo depmod
                sudo modprobe overlay
                sudo modprobe br_netfilter
 
