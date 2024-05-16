@@ -64,7 +64,7 @@
 
      - name: Download the public signing key for the Kubernetes package repositories 
        shell: |
-              curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+              curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --batch --yes --dearmor -o  /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 
      - name: install kubernetes
        shell: |
